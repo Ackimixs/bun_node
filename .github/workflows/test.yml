@@ -3,7 +3,7 @@ run-name: "Tester"
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   check-node-version:
