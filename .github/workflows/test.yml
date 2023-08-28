@@ -8,7 +8,7 @@ on:
 jobs:
   test-prject:
     runs-on: ubuntu-latest
-    name: Package version auto-increment job
+    name: "Tester"
     strategy:
       matrix:
         node-version: [18.17]
