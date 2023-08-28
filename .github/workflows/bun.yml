@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  test-prject:
+  test-bun-prject:
     runs-on: ubuntu-latest
     name: "Test bun algorithm"
     strategy:
@@ -25,3 +25,35 @@ jobs:
       - name: Test the module
         run: bun test
         working-directory: ./bun
+
+  test-node-project:
+    runs-on: ubuntu-latest
+    name: "Test node algorithm"
+    strategy:
+      matrix:
+        node-version: [18.17]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm i
+        working-directory: ./node
+
+      - name: Build the project
+        run: npm run build
+        working-directory: ./node
+
+      - name: lint
+        run: npm run lint
+        working-directory: ./node
+
+      - name: format
+        run: npm run format
+        working-directory: ./node
+
+      - name: Test the module
+        run: npm run test
+        working-directory: ./node
