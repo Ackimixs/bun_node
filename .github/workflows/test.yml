@@ -1,0 +1,21 @@
+name: "Tester"
+run-name: "Tester"
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  check-node-version:
+    runs-on: ubuntu-latest
+    name: Package version auto-increment job
+    strategy:
+      matrix:
+        node-version: [18.17]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - run: npm i
+      - run: node --version
