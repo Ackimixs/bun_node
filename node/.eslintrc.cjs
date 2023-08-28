@@ -3,6 +3,9 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -17,4 +20,7 @@ module.exports = {
       extends: ["plugin:@typescript-eslint/disable-type-checked"],
     },
   ],
+  rules: {
+    "@typescript-eslint/no-floating-promises": "off",
+  },
 };

@@ -47,7 +47,7 @@ export const shellSort = (arr: number[]): number[] => {
   while (gap > 0) {
     for (let i = gap; i < len; i++) {
       let j = i;
-      let current = arr[i];
+      const current = arr[i];
       while (j - gap >= 0 && current < arr[j - gap]) {
         arr[j] = arr[j - gap];
         j = j - gap;

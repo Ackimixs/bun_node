@@ -1,6 +1,6 @@
 export const createRandomArray = (
   length: number,
-  n: number = 10000
+  n: number = 10000,
 ): number[] => {
   const arr = [];
   for (let i = 0; i < length; i++) {

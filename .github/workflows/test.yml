@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  check-node-version:
+  test-prject:
     runs-on: ubuntu-latest
     name: Package version auto-increment job
     strategy:
@@ -17,15 +17,23 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "18"
+
       - name: Install dependencies
         run: npm i
         working-directory: ./node
-      - name: Check node version
-        run: node --version
+
+      - name: Build the project
+        run: npm run build
         working-directory: ./node
-      - name: Test the lint
+
+      - name: lint
         run: npm run lint
         working-directory: ./node
+
+      - name: format
+        run: npm run format
+        working-directory: ./node
+
       - name: Test the module
         run: npm run test
         working-directory: ./node
