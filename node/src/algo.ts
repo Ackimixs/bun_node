@@ -58,3 +58,18 @@ export const shellSort = (arr: number[]): number[] => {
   }
   return arr;
 };
+
+export const selectionSort = (arr: number[]): number[] => {
+  const len = arr.length;
+  let minIndex;
+  for (let i = 0; i < len; i++) {
+    minIndex = i;
+    for (let j = i; j < len; j++) {
+      if (arr[j] < arr[minIndex]) minIndex = j;
+    }
+    const temp = arr[i];
+    arr[i] = arr[minIndex];
+    arr[minIndex] = temp;
+  }
+  return arr;
+};

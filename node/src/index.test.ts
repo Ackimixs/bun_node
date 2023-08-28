@@ -1,6 +1,12 @@
 import assert from "node:assert/strict";
 import { beforeEach, describe, it } from "node:test";
-import { mergeSort, quickSort, bubblSort, shellSort } from "./algo";
+import {
+  mergeSort,
+  quickSort,
+  bubblSort,
+  shellSort,
+  selectionSort,
+} from "./algo";
 import { isSorted, createRandomArray } from "./utils";
 
 describe("test algorithm", () => {
@@ -23,5 +29,9 @@ describe("test algorithm", () => {
 
   it("shell sort", () => {
     assert.strictEqual(isSorted(shellSort(arr)), true);
+  });
+
+  it("selection sort", () => {
+    assert.strictEqual(isSorted(selectionSort(arr)), true);
   });
 });
