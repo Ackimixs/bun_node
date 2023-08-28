@@ -17,6 +17,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "18"
-      - run: cd node
-      - run: npm i
-      - run: node --version
+      - name: Install dependencies
+        run: npm i
+        working-directory: ./node
+      - name: Check node version
+        run: node --version
+        working-directory: ./node
