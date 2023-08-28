@@ -23,3 +23,9 @@ jobs:
       - name: Check node version
         run: node --version
         working-directory: ./node
+      - name: Test the lint
+        run: npm run lint
+        working-directory: ./node
+      - name: Test the module
+        run: npm run test
+        working-directory: ./node
