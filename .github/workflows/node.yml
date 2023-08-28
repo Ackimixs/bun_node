@@ -1,5 +1,5 @@
-name: "Tester"
-run-name: "Tester"
+name: "Test node algorithm"
+run-name: "Test node algorithm"
 on:
   push:
     branches:
@@ -8,7 +8,7 @@ on:
 jobs:
   test-prject:
     runs-on: ubuntu-latest
-    name: "Tester"
+    name: "Test node algorithm"
     strategy:
       matrix:
         node-version: [18.17]
