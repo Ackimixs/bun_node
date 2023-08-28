@@ -1,5 +1,5 @@
-name: "Test bun algorithm"
-run-name: "Test bun algorithm"
+name: "Test javascript sorting algorithm"
+run-name: "Test javascript sorting algorithm"
 on:
   push:
     branches:
@@ -8,7 +8,7 @@ on:
 jobs:
   test-bun-prject:
     runs-on: ubuntu-latest
-    name: "Test bun algorithm"
+    name: "Test javascript sorting algorithm"
     strategy:
       matrix:
         node-version: [18.17]
