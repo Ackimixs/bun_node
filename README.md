@@ -1,5 +1,15 @@
-# Sorting algorithm
+# bun
 
-sorting algorithm to compare bun and nodejs
+To install dependencies:
 
-(why i'm doing that in javascript i'm so fk dump)
+```bash
+bun install
+```
+
+To run:
+
+```bash
+bun run index.ts
+```
+
+This project was created using `bun init` in bun v0.6.3. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
