@@ -111,11 +111,9 @@ export const interpolationSearch = (
       return pos;
     }
     if (arr[pos] < x) {
-      console.log("how");
       return interpolationSearch(arr, x, pos + 1, hi);
     }
     if (arr[pos] > x) {
-      console.log("how2");
       return interpolationSearch(arr, x, lo, pos - 1);
     }
   }
