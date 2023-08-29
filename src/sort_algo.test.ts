@@ -11,7 +11,7 @@ import {
   heapSort,
   insertionSort,
   oddEvenSort,
-} from "./algo";
+} from "./sort_algo";
 import { isSorted, createRandomArray } from "./utils";
 
 describe("test algorithm", () => {
